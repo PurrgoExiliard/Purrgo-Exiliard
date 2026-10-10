@@ -13,6 +13,10 @@ function NavUI() {
                     <div className="link_box">
                         <Link className="nav_link" to="/Projects">Projects</Link>
                     </div>
+                    <div className="link_box">
+                        <Link className="nav_link" to="/Certificates">Certificates</Link>
+                    </div>
+
                 </div>
             </nav>
             </>

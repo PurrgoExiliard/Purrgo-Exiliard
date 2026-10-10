@@ -8,13 +8,13 @@ type GuitarButtonProps = {
 type GuitarButtonPropsOut = GuitarButtonProps & {
     url : string;
     text : string; 
-    id: number;
+    id: string;
 };
 
 type BlogPostProps = {
     title: string;
     content_text : string;
-    index: number;
+    index: string;
     imageSrc? : string;
     guitarComponents? : GuitarButtonProps;
 }
@@ -27,7 +27,7 @@ export default function BlogPost({title, content_text, index, imageSrc, guitarCo
         guitarComponentsOut = {url: "", text: "", id: index};
     }
     return <>
-    <div className="blog_post">
+    <div className="blog_post" id={"b"+index.toString()}>
         <h2 className="blog_post_title">{title}</h2>
         <p className="blog_post_content">{content_text}</p>
         {imageSrc && <img className="blog_post_image" src={imageSrc} alt={title} />}

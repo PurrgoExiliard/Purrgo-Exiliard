@@ -5,13 +5,14 @@ import BlogPosts from './QoCLib/BlogPosts.tsx'
 //placeholder for testing and development
 //will be replaced by API call on server
 //returning same array of objects
+import AboutMe from './components/AboutMe.tsx'
 import NavUI from './components/NavUI.tsx'
 
 
 function Home() {
   return (
     <div className="App">
-      <h1>Home</h1>
+      <AboutMe />
     </div>
   )
 }
@@ -19,10 +20,10 @@ function Home() {
 function Blog() {
   return (
     <div className="App">
-      <h1>Guitar Stuff</h1>
+      <h1 className="title">Blog</h1>
       <div className="blog_post_container">
         {BlogPosts.map((post, index) => (
-          <BlogPost key={index} title={post.title} content_text={post.content_text} index={index} imageSrc={post.imageSrc} guitarComponents={post.guitarComponents} />
+          <BlogPost key={index} title={post.title} content_text={post.content_text} index={post.id} imageSrc={post.imageSrc} guitarComponents={post.guitarComponents} />
         ))}
       </div>
     </div>
@@ -32,7 +33,7 @@ function Blog() {
 function Projects() {
   return (
     <div className="App">
-      <h1>Projects</h1>
+      <h1 className="title">Projects</h1>
     </div>
   )
 }
@@ -47,6 +48,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Guitar" element={<Blog />} />
         <Route path="/Projects" element={<Projects />} />
+        <Route path="/Certificates" />
       </Routes>
     </>
   )

@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 type GuitarButtonProps = {
   url: string;
   text: string;
-  id: number;
+  id: string;
 };
 
 export const GuitarButton = ({url, text, id}: GuitarButtonProps) => {
@@ -28,7 +28,7 @@ export const GuitarButton = ({url, text, id}: GuitarButtonProps) => {
   return <>
     <div className="guitar_container">
     <span>{text}</span>
-    <button id={id.toString()} onClick={handleClick}>
+    <button id={id} onClick={handleClick}>
       {isPlaying ? "Stop" : "Play"}
     </button>
     </div>
