@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <NavUI />
-      <Routes>
+      <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/Guitar" element={<Guitar />} />
         <Route path="/Projects" element={<Projects />} />
