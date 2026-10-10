@@ -1,4 +1,4 @@
-import {Routes, Route, Link} from "react-router"
+import {Routes, Route} from "react-router"
 import './App.css'
 import GuitarButton from './components/GuitarButton.tsx'
 import GuitarSoundSamples from './QoCLib/GuitarSamples.tsx'
