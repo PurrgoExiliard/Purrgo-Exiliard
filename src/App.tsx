@@ -1,7 +1,10 @@
 import {Routes, Route} from "react-router"
 import './App.css'
 import BlogPost from './components/BlogPost.tsx'
-import BlogPosts from './QoCLib/BlogPosts.tsx'
+import BlogPosts from './QoCLib/BlogPosts.tsx' 
+//placeholder for testing and development
+//will be replaced by API call on server
+//returning same array of objects
 import NavUI from './components/NavUI.tsx'
 
 
