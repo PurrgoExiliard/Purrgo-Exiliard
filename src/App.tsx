@@ -1,8 +1,7 @@
 import {Routes, Route, Link} from "react-router"
 import './App.css'
 import GuitarButton from './components/GuitarButton.tsx'
-import bleedingMe from "./assets/bleeding-me.mp3";
-import masterOfPuppets from "./assets/master-of-puppets-interlude.mp3";
+import GuitarSoundSamples from './QoCLib/GuitarSamples.tsx'
 import NavUI from './components/NavUI.tsx'
 
 
@@ -18,8 +17,9 @@ function Guitar() {
   return (
     <div className="App">
       <h1>Guitar Stuff</h1>
-      <GuitarButton url={bleedingMe} text="Bleeding Me" />
-      <GuitarButton url={masterOfPuppets} text="Master of Puppets" />
+      {GuitarSoundSamples.map((sample, index) => (
+        <GuitarButton key={index} url={sample.url} text={sample.text} />
+      ))}
     </div>
   )
 }

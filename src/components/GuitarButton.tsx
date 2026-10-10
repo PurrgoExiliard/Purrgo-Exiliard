@@ -4,11 +4,16 @@ type GuitarButtonProps = {
 };
 
 export const GuitarButton = ({url, text}: GuitarButtonProps) => {
+  var isPlaying = false;
+  const audio = new Audio(url);
   const handleClick = () => {
-    // Create a new audio element for each click
-    const audio = new Audio(url);
-    audio.play();
-    
+    if (isPlaying) {
+      audio.pause();
+      audio.currentTime = 0;
+    } else {
+      audio.play();
+    }
+    isPlaying = !isPlaying;
   };
   return <>
     <button key={text} onClick={handleClick}>Play {text}</button>
