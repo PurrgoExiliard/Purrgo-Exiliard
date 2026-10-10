@@ -1,4 +1,4 @@
-import GuitarSoundSamples from './GuitarSoundSamples.tsx'
+import GuitarSoundSamples from './GuitarSoundSamples.tsx';
 import hero from "../assets/hero.png";
 
 

@@ -18,12 +18,15 @@
 .link_box{
   transition: all 0.3s ease-in-out reverse;
   background-color: var(--Link_bg);
-  padding: 20px 30px;
+  
   border: 1px solid var(--border);
   border-radius: 19px;
 
 
   a {
+    margin: 50px 10px;
+    /* line-height: 50px; */
+    
     color: var(--Link_text);
     text-decoration: none;
   }
@@ -102,3 +105,152 @@
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 } 
+
+.cert {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items:  center;
+  justify-content: center;
+  margin: 20px;
+  padding: 30px;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  width: 75%;
+}
+
+.cert_group {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: space-evenly;
+  justify-content: space-evenly;
+}
+
+.cert_container, .projects_container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects_container {
+  margin-top: 20px;
+  border: 3px solid var(--border);
+  border-radius:  30px;
+  width: 70%;
+  align-self: center;
+}
+
+.about_me {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.about_me_ul, .projects_ul {
+  width: 60%;
+  text-align: start;
+}
+
+
+.about_me_info, .about_me_school {
+  color: var(--text-clr);
+  margin: 10px;
+  padding: 20px;
+  border: 3px solid var(--border);
+  border-radius: 30px;
+}
+
+.about_me_info {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+
+.links_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    margin-top: var(--margin-small);
+}
+.links_info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: var(--gap-small);
+    width: min(70vw, 500px);
+    font-size: var(--font-size-links);
+}
+
+.links_info img {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: block;
+    transition: transform var(--transition), filter var(--transition), box-shadow var(--transition);
+}
+.discord, .instagram, .telegram, .youtube, .barq {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    color: var(--text-clr);
+}
+
+/* Glow behind the icon (shows through PNG transparency) */
+.discord::before,
+.instagram::before,
+.youtube::before,
+.telegram::before,
+.barq::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--border-radius-full);
+    z-index: 0;
+    opacity: var(--opacity-glow);
+    filter: blur(var(--blur-glow));
+    top: var(--top-offset);
+}
+
+.discord::before {
+    background: rgba(115, 138, 219, 0.55);
+}
+
+.instagram::before {
+    background: radial-gradient(circle at 30% 30%, rgba(214, 41, 118, 0.65), rgba(150, 47, 191, 0.4));
+}
+
+.youtube::before {
+    background: rgba(255, 50, 50, 0.55);
+}
+
+.telegram::before {
+    background: rgba(0, 136, 204, 0.55);
+}
+.barq::before {
+    background: rgba(255, 100, 0, 0.55);
+}
+
+.discord img,
+.instagram img,
+.youtube img,
+.telegram img,
+.barq img {
+    border-radius: var(--border-radius-full);
+    display: block;
+    filter: drop-shadow(0 0 var(--blur-glow) var(--shadow-black-light));
+    transition: transform var(--transition), filter var(--transition);
+}
+
+.discord img:hover,
+.instagram img:hover,
+.youtube img:hover,
+.telegram img:hover,
+.barq img:hover {
+    transform: scale(var(--scale-hover));
+    filter: drop-shadow(0 0 var(--blur-glow-hover) var(--shadow-black-medium));
+}

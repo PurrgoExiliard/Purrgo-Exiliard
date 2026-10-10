@@ -4,20 +4,22 @@ type CertificatesData = {
     given_by: string;
 }
 type CertificatesProps = {
-    dataset: CertificatesData[]
+    dataset: CertificatesData[];
 }
 
 
 function Certificate({date, cert, given_by}: CertificatesData){
     return <>
     <div className="cert">
-        <span className="cert_title">
-            {cert}
-        </span>
+        <div className="cert_title_div">
+            <span className="cert_title">{cert}</span>
+        </div>
+        <div className="cert_group">
         <span className="cert_recieved">
             Recieved : {date.toLocaleDateString()}
         </span>
         <span className="cert_given">Given by : {given_by}</span>
+        </div>
     </div>
     
     </>

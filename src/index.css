@@ -34,6 +34,27 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+
+
+--text-clr: #D0D0D0;
+    --transition: 0.25s ease;
+    --border-radius-full: 50%;
+    --margin-small: 20px;
+    --gap-small: 1rem;
+    --font-size-links: 20px;
+    --icon-size: 50px;
+    --shadow-black-light: rgba(0, 0, 0, 0.35);
+    --shadow-black-medium: rgba(0, 0, 0, 0.4);
+    --blur-glow: 12px;
+    --blur-glow-hover: 18px;
+    --opacity-glow: 0.8;
+    --top-offset: -5px;
+    --scale-hover: 1.08;
+    --mobile-font-size-links: 18px;
+    --mobile-gap: 3vh;
+    --mobile-icon-size: 44px;
+
+
 }
 
 @media (prefers-color-scheme: dark) {
