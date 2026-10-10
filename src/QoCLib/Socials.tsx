@@ -12,7 +12,7 @@ const socialsData = {
     template : "icon.html",
     data : [
         {
-            link: "https://discord.gg/BXq6DATg7z",
+            link: "https://discord.gg/GQpTQyrmkE",
             img : discord,
             alt : "Discord Server link",
             text : "Discord",
