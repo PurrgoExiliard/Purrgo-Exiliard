@@ -18,7 +18,7 @@ function Guitar() {
     <div className="App">
       <h1>Guitar Stuff</h1>
       {GuitarSoundSamples.map((sample, index) => (
-        <GuitarButton key={index} url={sample.url} text={sample.text} />
+        <GuitarButton key={index} url={sample.url} text={sample.text} id={index} />
       ))}
     </div>
   )
