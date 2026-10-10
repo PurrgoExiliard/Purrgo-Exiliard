@@ -56,7 +56,7 @@ function App() {
       <NavUI />
       <Routes >
         <Route path="/" element={<Home />} />
-        <Route path="/Guitar" element={<Blog />} />
+        <Route path="/Blog" element={<Blog />} />
         <Route path="/Projects" element={<Projects dataset={ProjectData}/>} />
         <Route path="/Certificates" element={<Certificates dataset={testData}/>}/>
       </Routes>

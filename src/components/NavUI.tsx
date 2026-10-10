@@ -8,7 +8,7 @@ function NavUI() {
                         <Link className="nav-link" to="/">Home</Link>
                     </div>
                     <div className="link_box">
-                        <Link className="nav_link" to="/Guitar">Guitar Stuff</Link>
+                        <Link className="nav_link" to="/Blog">Blog</Link>
                     </div>
                     <div className="link_box">
                         <Link className="nav_link" to="/Projects">Projects</Link>
