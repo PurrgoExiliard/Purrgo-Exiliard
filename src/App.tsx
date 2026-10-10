@@ -16,16 +16,15 @@ function Home() {
   )
 }
 
-function Guitar() {
+function Blog() {
   return (
     <div className="App">
       <h1>Guitar Stuff</h1>
-      {/* {GuitarSoundSamples.map((sample, index) => (
-        <GuitarButton key={index} url={sample.url} text={sample.text} id={index} />
-    ))} */}
-      {BlogPosts.map((post, index) => (
-        <BlogPost key={index} title={post.title} content_text={post.content_text} index={index} imageSrc={post.imageSrc} guitarComponents={post.guitarComponents} />
-      ))}
+      <div className="blog_post_container">
+        {BlogPosts.map((post, index) => (
+          <BlogPost key={index} title={post.title} content_text={post.content_text} index={index} imageSrc={post.imageSrc} guitarComponents={post.guitarComponents} />
+        ))}
+      </div>
     </div>
   )
 }
@@ -46,7 +45,7 @@ function App() {
       <NavUI />
       <Routes >
         <Route path="/" element={<Home />} />
-        <Route path="/Guitar" element={<Guitar />} />
+        <Route path="/Guitar" element={<Blog />} />
         <Route path="/Projects" element={<Projects />} />
       </Routes>
     </>

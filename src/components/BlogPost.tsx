@@ -27,10 +27,10 @@ export default function BlogPost({title, content_text, index, imageSrc, guitarCo
         guitarComponentsOut = {url: "", text: "", id: index};
     }
     return <>
-    <div className="blog_post_container">
-        <h2>{title}</h2>
-        <p>{content_text}</p>
-        {imageSrc && <img src={imageSrc} alt={title} />}
+    <div className="blog_post">
+        <h2 className="blog_post_title">{title}</h2>
+        <p className="blog_post_content">{content_text}</p>
+        {imageSrc && <img className="blog_post_image" src={imageSrc} alt={title} />}
         {guitarComponents && <GuitarButton {...guitarComponentsOut} />}
     </div>
     </>

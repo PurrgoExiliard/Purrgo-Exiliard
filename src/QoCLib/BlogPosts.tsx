@@ -13,6 +13,6 @@ const blogs = [
     content_text: "This is a test blog post with an image.",
     imageSrc: hero,
   }
-]
+].reverse(); //to show the latest blog post first
 
 export default blogs;
