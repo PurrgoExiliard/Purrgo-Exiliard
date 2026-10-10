@@ -6,7 +6,23 @@ import BlogPosts from './QoCLib/BlogPosts.tsx'
 //will be replaced by API call on server
 //returning same array of objects
 import AboutMe from './components/AboutMe.tsx'
+import Certificates from "./components/Certificates.tsx"
+// import testData from "./components/Certificates.tsx"
 import NavUI from './components/NavUI.tsx'
+
+const testData = [
+  {
+      date: new Date("04-06-2006"),
+      cert : "life",
+      given_by: "my mom"
+  },
+  {
+      date: new Date("04-06-2006"),
+      cert : "life",
+      given_by: "my mom"
+  }
+
+];
 
 
 function Home() {
@@ -48,7 +64,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Guitar" element={<Blog />} />
         <Route path="/Projects" element={<Projects />} />
-        <Route path="/Certificates" />
+        <Route path="/Certificates" element={<Certificates dataset={testData}/>}/>
       </Routes>
     </>
   )
