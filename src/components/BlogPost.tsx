@@ -18,8 +18,7 @@ type BlogPostProps = {
     imageSrc? : string;
     guitarComponents? : GuitarButtonProps;
 }
-
-export default function BlogPost({title, content_text, index, imageSrc, guitarComponents} : BlogPostProps) {
+ function BlogPost({title, content_text, index, imageSrc, guitarComponents} : BlogPostProps) {
     let guitarComponentsOut: GuitarButtonPropsOut;
     if (guitarComponents) {
        guitarComponentsOut = {...guitarComponents, id: index};
@@ -35,3 +34,6 @@ export default function BlogPost({title, content_text, index, imageSrc, guitarCo
     </div>
     </>
 }
+
+
+export default BlogPost

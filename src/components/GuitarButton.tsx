@@ -6,8 +6,8 @@ type GuitarButtonProps = {
   id: string;
 };
 
-export const GuitarButton = ({url, text, id}: GuitarButtonProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+function GuitarButton({url, text, id}: GuitarButtonProps) {
+const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const handleClick = () => {
     if (!audioRef.current) {
@@ -33,7 +33,6 @@ export const GuitarButton = ({url, text, id}: GuitarButtonProps) => {
     </button>
     </div>
   </>;
-
-};
+}
 
 export default GuitarButton;
